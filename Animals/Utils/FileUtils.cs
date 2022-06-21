@@ -32,7 +32,10 @@ namespace Utils
             string json = JsonConvert.SerializeObject(animal, Formatting.Indented);
 
             // write the list to the file.
-            File.WriteAllText(path, json);
+            if (File.Exists(path))
+                File.AppendAllText(path, json);
+            else
+                File.WriteAllText(path, json);
         }
 
         public List<string> ReadFile()
