@@ -18,3 +18,13 @@ D:\Kimberly\Documents\Goals\Animals\obj\Debug\Animals.csproj.CoreCompileInputs.c
 D:\Kimberly\Documents\Goals\Animals\obj\Debug\Animals.csproj.CopyComplete
 D:\Kimberly\Documents\Goals\Animals\obj\Debug\Animals.exe
 D:\Kimberly\Documents\Goals\Animals\obj\Debug\Animals.pdb
+D:\Working\Goals\AnimalsProject\Animals\bin\Debug\Animals.exe.config
+D:\Working\Goals\AnimalsProject\Animals\bin\Debug\Animals.exe
+D:\Working\Goals\AnimalsProject\Animals\bin\Debug\Animals.pdb
+D:\Working\Goals\AnimalsProject\Animals\bin\Debug\Newtonsoft.Json.dll
+D:\Working\Goals\AnimalsProject\Animals\bin\Debug\Newtonsoft.Json.xml
+D:\Working\Goals\AnimalsProject\Animals\obj\Debug\Animals.csproj.AssemblyReference.cache
+D:\Working\Goals\AnimalsProject\Animals\obj\Debug\Animals.csproj.CoreCompileInputs.cache
+D:\Working\Goals\AnimalsProject\Animals\obj\Debug\Animals.csproj.CopyComplete
+D:\Working\Goals\AnimalsProject\Animals\obj\Debug\Animals.exe
+D:\Working\Goals\AnimalsProject\Animals\obj\Debug\Animals.pdb
