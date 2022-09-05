@@ -28,3 +28,13 @@ D:\Working\Goals\AnimalsProject\Animals\obj\Debug\Animals.csproj.CoreCompileInpu
 D:\Working\Goals\AnimalsProject\Animals\obj\Debug\Animals.csproj.CopyComplete
 D:\Working\Goals\AnimalsProject\Animals\obj\Debug\Animals.exe
 D:\Working\Goals\AnimalsProject\Animals\obj\Debug\Animals.pdb
+D:\Kimberly\Documents\Goals\AnimalsProject\Animals\bin\Debug\Animals.exe.config
+D:\Kimberly\Documents\Goals\AnimalsProject\Animals\bin\Debug\Animals.exe
+D:\Kimberly\Documents\Goals\AnimalsProject\Animals\bin\Debug\Animals.pdb
+D:\Kimberly\Documents\Goals\AnimalsProject\Animals\bin\Debug\Newtonsoft.Json.dll
+D:\Kimberly\Documents\Goals\AnimalsProject\Animals\bin\Debug\Newtonsoft.Json.xml
+D:\Kimberly\Documents\Goals\AnimalsProject\Animals\obj\Debug\Animals.csproj.AssemblyReference.cache
+D:\Kimberly\Documents\Goals\AnimalsProject\Animals\obj\Debug\Animals.csproj.CoreCompileInputs.cache
+D:\Kimberly\Documents\Goals\AnimalsProject\Animals\obj\Debug\Animals.csproj.CopyComplete
+D:\Kimberly\Documents\Goals\AnimalsProject\Animals\obj\Debug\Animals.exe
+D:\Kimberly\Documents\Goals\AnimalsProject\Animals\obj\Debug\Animals.pdb

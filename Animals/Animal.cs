@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Animals
 {
-    class Animal : AnimalType
+    public class Animal : AnimalType
     {
-        List<string> animalList = new List<string>();
+        List<Animal> animalList { get; set; }
+
+        public Animal() { }
     }
 }
