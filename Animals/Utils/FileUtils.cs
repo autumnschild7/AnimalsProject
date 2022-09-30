@@ -9,6 +9,8 @@ namespace Utils
 {
     class FileUtils
     {
+        List<Animal> listOfAnimals = new List<Animal>();
+
         string path = Path.Combine("D:\\Kimberly\\Documents\\Goals\\AnimalsProject\\" +
             "Animals", "Animal.json");
 
@@ -16,8 +18,6 @@ namespace Utils
         //handle writing to file
         public void WriteFile(Animal newAnimal)
         {
-            List<Animal> animalList = new List<Animal>();
-
             Animal animal = new Animal
             {
                 Type = newAnimal.Type,
@@ -28,9 +28,9 @@ namespace Utils
             };
 
             // Add the animal to the list
-            animalList.Add(animal);
+            listOfAnimals.Add(animal);
 
-            string json = JsonConvert.SerializeObject(animalList, Formatting.Indented);
+            string json = JsonConvert.SerializeObject(listOfAnimals, Formatting.Indented);
 
             // write the list to the file.
             if (File.Exists(path))
@@ -42,7 +42,6 @@ namespace Utils
         public void ReadFile()
         {
             Animal animal = new Animal();
-            List<Animal> aList = new List<Animal>();
 
             List<Animal> jsonAnimalList = JsonConvert.DeserializeObject<List<Animal>>(File.ReadAllText(path));
 
@@ -54,10 +53,10 @@ namespace Utils
                 animal.Noise = j.Noise;
                 animal.NumberOfFeet = j.NumberOfFeet;
 
-                aList.Add(animal);
+                listOfAnimals.Add(animal);
             }
             
-            Console.WriteLine(aList.ToString());
+            Console.WriteLine(listOfAnimals.ToString());
             Console.ReadLine();
         }
     }

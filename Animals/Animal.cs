@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +8,7 @@ namespace Animals
 {
     public class Animal : AnimalType
     {
+        [JsonProperty("animal")]
         List<Animal> animalList { get; set; }
 
         public Animal() { }

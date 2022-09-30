@@ -9,27 +9,15 @@ namespace Animals
         public string Type { get; set; }
 
         [JsonProperty ("two")]
-        public string Name
-        {
-            get; set;
-        }
+        public string Name { get; set; }
 
         [JsonProperty("three")]
-        public string Size
-        {
-            get; set;
-        }
+        public string Size { get; set; }
 
         [JsonProperty("four")]
-        public string Noise
-        {
-            get; set;
-        }
+        public string Noise { get; set; }
 
         [JsonProperty("five")]
-        public string NumberOfFeet
-        {
-            get; set;
-        }
+        public string NumberOfFeet { get; set; }
     }
 }

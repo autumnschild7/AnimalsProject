@@ -1,16 +1,9 @@
 [
   {
-    "Type": "Bird",
-    "Name": "Hummingbird",
-    "Size": "Ex Small",
-    "Noise": "Chittering",
-    "NumberOfFeet": "2"
-  },
-  {
-    "Type": "Bird",
-    "Name": "whippoorwill",
-    "Size": "Medium",
-    "Noise": "Whip-poor-will",
-    "NumberOfFeet": "2"
+    "one": "Bird",
+    "two": "Hummingbird",
+    "three": "Ex Small",
+    "four": "Chitter",
+    "five": "2"
   }
 ]
