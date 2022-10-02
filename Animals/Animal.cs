@@ -1,16 +1,23 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Animals
 {
-    public class Animal : AnimalType
+    public class Animal : IAttributes
     {
-        [JsonProperty("animal")]
-        List<Animal> animalList { get; set; }
+        [JsonProperty("one")]
+        public string Type { get; set; }
 
-        public Animal() { }
+        [JsonProperty("two")]
+        public string Name { get; set; }
+
+        [JsonProperty("three")]
+        public string Size { get; set; }
+
+        [JsonProperty("four")]
+        public string Noise { get; set; }
+
+        [JsonProperty("five")]
+        public string NumberOfFeet { get; set; }
     }
 }

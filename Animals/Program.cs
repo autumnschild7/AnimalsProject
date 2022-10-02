@@ -33,6 +33,7 @@ namespace Animals
                 //prompt to add new animal
                 if (choice == 2)
                 {
+                    f.ReadFile();
                     ConsoleUtils c = new ConsoleUtils();
                     c.EnterCharacteristics();
                 }

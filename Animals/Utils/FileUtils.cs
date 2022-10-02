@@ -9,15 +9,18 @@ namespace Utils
 {
     class FileUtils
     {
-        List<Animal> listOfAnimals = new List<Animal>();
-
         string path = Path.Combine("D:\\Kimberly\\Documents\\Goals\\AnimalsProject\\" +
             "Animals", "Animal.json");
+
+        protected List<Animal> listOfAnimals = new List<Animal>();
 
         //Save to disk
         //handle writing to file
         public void WriteFile(Animal newAnimal)
         {
+            if (newAnimal == null)
+                return;
+
             Animal animal = new Animal
             {
                 Type = newAnimal.Type,
@@ -28,11 +31,11 @@ namespace Utils
             };
 
             // Add the animal to the list
-            listOfAnimals.Add(animal);
+            this.listOfAnimals.Add(animal);
 
-            string json = JsonConvert.SerializeObject(listOfAnimals, Formatting.Indented);
+            string json = JsonConvert.SerializeObject(this.listOfAnimals, Formatting.Indented);
 
-            // write the list to the file.
+            //write the list to the file.
             if (File.Exists(path))
                 File.AppendAllText(path, json);
             else
@@ -44,6 +47,7 @@ namespace Utils
             Animal animal = new Animal();
 
             List<Animal> jsonAnimalList = JsonConvert.DeserializeObject<List<Animal>>(File.ReadAllText(path));
+            var animalsFromFile = new List<Animal>();
 
             foreach (var j in jsonAnimalList)
             {
@@ -53,11 +57,13 @@ namespace Utils
                 animal.Noise = j.Noise;
                 animal.NumberOfFeet = j.NumberOfFeet;
 
-                listOfAnimals.Add(animal);
+                animalsFromFile.Add(animal);
             }
             
-            Console.WriteLine(listOfAnimals.ToString());
-            Console.ReadLine();
+            listOfAnimals = animalsFromFile;
+
+            Console.WriteLine(this.listOfAnimals.ToString());
+            //Console.ReadLine();
         }
     }
 }
