@@ -7,6 +7,7 @@ using System.Linq;
 
 namespace Utils
 {
+    [Serializable]
     class FileUtils
     {
         string path = Path.Combine("D:\\Kimberly\\Documents\\Goals\\AnimalsProject\\" +
