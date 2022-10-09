@@ -7,34 +7,24 @@ using System.Linq;
 
 namespace Utils
 {
-    [Serializable]
     class FileUtils
     {
         string path = Path.Combine("D:\\Kimberly\\Documents\\Goals\\AnimalsProject\\" +
             "Animals", "Animal.json");
 
-        protected List<Animal> listOfAnimals = new List<Animal>();
+        AnimalList aList = new AnimalList();
 
         //Save to disk
         //handle writing to file
-        public void WriteFile(Animal newAnimal)
+        public void WriteFile(Animal animal)
         {
-            if (newAnimal == null)
+            if (animal == null)
                 return;
 
-            Animal animal = new Animal
-            {
-                Type = newAnimal.Type,
-                Name = newAnimal.Name,
-                Size = newAnimal.Size,
-                Noise = newAnimal.Noise,
-                NumberOfFeet = newAnimal.NumberOfFeet
-            };
-
             // Add the animal to the list
-            this.listOfAnimals.Add(animal);
+            aList.AddAnimal(animal);
 
-            string json = JsonConvert.SerializeObject(this.listOfAnimals, Formatting.Indented);
+            string json = JsonConvert.SerializeObject(aList.animalList, Formatting.Indented);
 
             //write the list to the file.
             if (File.Exists(path))
@@ -61,9 +51,9 @@ namespace Utils
                 animalsFromFile.Add(animal);
             }
             
-            listOfAnimals = animalsFromFile;
+            aList.animalList = animalsFromFile;
 
-            Console.WriteLine(this.listOfAnimals.ToString());
+            Console.WriteLine(aList.animalList.ToString());
             //Console.ReadLine();
         }
     }

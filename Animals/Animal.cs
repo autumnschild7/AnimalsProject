@@ -5,19 +5,19 @@ namespace Animals
 {
     public class Animal : IAttributes
     {
-        [JsonProperty("one")]
+        //[JsonProperty("one")]
         public string Type { get; set; }
 
-        [JsonProperty("two")]
+        //[JsonProperty("two")]
         public string Name { get; set; }
 
-        [JsonProperty("three")]
+        //[JsonProperty("three")]
         public string Size { get; set; }
 
-        [JsonProperty("four")]
+        //[JsonProperty("four")]
         public string Noise { get; set; }
 
-        [JsonProperty("five")]
+        //[JsonProperty("five")]
         public string NumberOfFeet { get; set; }
     }
 }
