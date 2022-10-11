@@ -9,52 +9,40 @@ namespace Utils
 {
     class FileUtils
     {
-        string path = Path.Combine("D:\\Kimberly\\Documents\\Goals\\AnimalsProject\\" +
-            "Animals", "Animal.json");
+        //string path = Path.Combine("D:\\Kimberly\\Documents\\Goals\\AnimalsProject\\" +
+        //    "Animals", "Animal.json");
+        string path = Path.Combine("D:\\Goals\\AnimalsProject\\Animals", "Animal.json");
 
-        AnimalList aList = new AnimalList();
+        Animal animal = new Animal();
 
         //Save to disk
         //handle writing to file
-        public void WriteFile(Animal animal)
+        public void WriteFile(Animal newAnimal)
         {
-            if (animal == null)
+            if (newAnimal == null)
                 return;
 
             // Add the animal to the list
-            aList.AddAnimal(animal);
+            animal.AddAnimal(newAnimal);
 
-            string json = JsonConvert.SerializeObject(aList.animalList, Formatting.Indented);
+            string animalData = JsonConvert.SerializeObject(animal.animalList, Formatting.Indented);
 
             //write the list to the file.
             if (File.Exists(path))
-                File.AppendAllText(path, json);
+                File.AppendAllText(path, animalData);
             else
-                File.WriteAllText(path, json);
+                File.WriteAllText(path, animalData);
         }
 
-        public void ReadFile()
+        public string ReadFile()
         {
+            if (File.Exists(path) == false) return "Incorrect file path.";
+
             Animal animal = new Animal();
 
-            List<Animal> jsonAnimalList = JsonConvert.DeserializeObject<List<Animal>>(File.ReadAllText(path));
-            var animalsFromFile = new List<Animal>();
+            String contents = File.ReadAllText(path);
 
-            foreach (var j in jsonAnimalList)
-            {
-                animal.Type = j.Type;
-                animal.Name = j.Name;
-                animal.Size = j.Size;
-                animal.Noise = j.Noise;
-                animal.NumberOfFeet = j.NumberOfFeet;
-
-                animalsFromFile.Add(animal);
-            }
-            
-            aList.animalList = animalsFromFile;
-
-            Console.WriteLine(aList.animalList.ToString());
-            //Console.ReadLine();
+            return JsonConvert.DeserializeObject<string>(contents);
         }
     }
 }

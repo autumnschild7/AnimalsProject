@@ -49,6 +49,7 @@
     <Compile Include="Animal.cs" />
     <Compile Include="AnimalList.cs" />
     <Compile Include="IAttributes.cs" />
+    <Compile Include="UserInteraction.cs" />
     <Compile Include="Utils\ConsoleUtils.cs" />
     <Compile Include="Utils\FileUtils.cs" />
     <Compile Include="Program.cs" />

@@ -3,8 +3,11 @@ using System.Collections.Generic;
 
 namespace Animals
 {
-    public class Animal : IAttributes
+    [System.Serializable]
+    public class Animal
     {
+        public List<Animal> animalList = new List<Animal>();
+
         //[JsonProperty("one")]
         public string Type { get; set; }
 
@@ -19,5 +22,20 @@ namespace Animals
 
         //[JsonProperty("five")]
         public string NumberOfFeet { get; set; }
+
+        public void AddAnimal(Animal newAnimal)
+        {
+            Animal animal = new Animal
+            {
+                Type = newAnimal.Type,
+                Name = newAnimal.Name,
+                Size = newAnimal.Size,
+                Noise = newAnimal.Noise,
+                NumberOfFeet = newAnimal.NumberOfFeet
+            };
+            animalList.Add(animal);
+        }
+
+        public void GetAnimalList(Animal theListOfAnimalsFromFile) { }
     }
 }
