@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace Animals
 {
     interface IAttributes
     {
+        string Type { get; set; }
         string Name { get; set; }
         string Size { get; set; }
         string Noise { get; set; }

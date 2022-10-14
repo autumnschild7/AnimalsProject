@@ -1,9 +1,37 @@
 [
   {
-    "one": "Bird",
-    "two": "Hummingbird",
-    "three": "Ex Small",
-    "four": "Chitter",
-    "five": "2"
+    "Type": "Bird",
+    "Name": "Hummingbird",
+    "Size": "Small",
+    "Noise": "Chitter",
+    "NumberOfFeet": "2"
+  },
+  {
+    "Type": "Mammal",
+    "Name": "Lion",
+    "Size": "Ex Large",
+    "Noise": "Roar",
+    "NumberOfFeet": "4"
+  },
+  {
+    "Type": "Mammal",
+    "Name": "Lion",
+    "Size": "Ex Large",
+    "Noise": "Roar",
+    "NumberOfFeet": "4"
+  },
+  {
+    "Type": "Mammal",
+    "Name": "Lion",
+    "Size": "Ex Large",
+    "Noise": "Roar",
+    "NumberOfFeet": "4"
+  },
+  {
+    "Type": "Bird",
+    "Name": "Finch",
+    "Size": "Small",
+    "Noise": "Chirp",
+    "NumberOfFeet": "2"
   }
 ]

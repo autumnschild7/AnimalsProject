@@ -1,16 +1,55 @@
-﻿using System;
-using Animals;
+﻿using Utils;
+using System;
+using System.IO;
 
-namespace Utils
+namespace Animals
 {
-    class ConsoleUtils
+    class ConsoleInteraction
     {
+        //string path = Path.Combine("D:\\Kimberly\\Documents\\Goals\\AnimalsProject\\" +
+        //    "Animals", "Animal.json");
+        string path = Path.Combine("D:\\Goals\\AnimalsProject\\Animals", "Animal.json");
+
+        AnimalUtils au = new AnimalUtils();
+
+        public void GetAnimalList()
+        {
+            au.GetExistingAnimalList(path);
+            PromptUser();
+        }
+
+        //Console app -prompt for View animals, Display animals
+        public void PromptUser()
+        {
+            int choice;
+
+            //Console app -prompt for View animals
+            //prompt to add new animal
+            Console.WriteLine("Enter 1 to view animals. \r\nEnter 2 to create a new animal.");
+
+            //Display animals
+            choice = Convert.ToInt32(Console.ReadLine());
+
+            if (choice == 1)
+            {
+                //handle reading from file
+                //App should load animals file - “animals.json”
+                // call function to read a file and display animals
+                Console.WriteLine("Coming soon. Press any key to close.");
+                Console.ReadLine();
+            }
+
+            //prompt to add new animal
+            if (choice == 2)
+            {
+                this.EnterCharacteristics();
+            }
+        }
         //Create animal - Allow user to enter characteristics
         //type, size, name, noise, numberOfFeet
         public void EnterCharacteristics()
         {
             Animal a = new Animal();
-            FileUtils file = new FileUtils();
             bool txtValidation;
 
             Console.WriteLine("Enter the type of animal. (Bird, Reptile, Mammal, etc.");
@@ -63,7 +102,8 @@ namespace Utils
             a.NumberOfFeet = Console.ReadLine();
             //ValidateText(a.NumberOfFeet);
 
-            file.WriteFile(a);
+            //call add to list then call write file from that
+            au.AddAnimalToList(a, path);
 
             string row = a.Type + "," + a.Name + "," + a.Size + "," + a.Noise + "," + a.NumberOfFeet;
 

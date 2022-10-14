@@ -1,5 +1,4 @@
 ﻿using Utils;
-using System;
 
 namespace Animals
 {
@@ -7,8 +6,8 @@ namespace Animals
     {
         static void Main(string[] args)
         {
-            UserInteraction ui = new UserInteraction();
-            ui.PromptUser();           
+            ConsoleInteraction ci = new ConsoleInteraction();
+            ci.GetAnimalList();           
         }
     }
 }
