@@ -1,9 +1,7 @@
-﻿using System;
-using Animals;
+﻿using Animals;
 using System.IO;
 using Newtonsoft.Json;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Utils
 {

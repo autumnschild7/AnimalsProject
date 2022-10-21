@@ -1,9 +1,5 @@
-﻿using System;
-using Animals;
+﻿using Animals;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Utils
 {
@@ -13,7 +9,6 @@ namespace Utils
         // make file utils and the list class variables
         FileUtils file = new FileUtils();
         List<Animal> listOfAnimals = new List<Animal>();
-        Animal animal = new Animal();
 
         public AnimalUtils()
         {
@@ -21,18 +16,10 @@ namespace Utils
 
         public void GetExistingAnimalList(string path)
         {
+            Animal animal = new Animal();
             listOfAnimals = file.ReadFile(path);
 
-            foreach (var a in listOfAnimals.ToList())
-            {
-                animal.Type = a.Type;
-                animal.Name = a.Name;
-                animal.Size = a.Size;
-                animal.Noise = a.Noise;
-                animal.NumberOfFeet = a.NumberOfFeet;
-
-                listOfAnimals.Add(animal);
-            }
+            if (listOfAnimals == null) return;
         }
 
         public void AddAnimalToList(Animal newAnimal, string path)

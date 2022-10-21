@@ -6,9 +6,9 @@ namespace Animals
 {
     class ConsoleInteraction
     {
-        //string path = Path.Combine("D:\\Kimberly\\Documents\\Goals\\AnimalsProject\\" +
-        //    "Animals", "Animal.json");
-        string path = Path.Combine("D:\\Goals\\AnimalsProject\\Animals", "Animal.json");
+        string path = Path.Combine("D:\\Kimberly\\Documents\\Goals\\AnimalsProject\\" +
+            "Animals", "Animal.json");
+        //string path = Path.Combine("D:\\Goals\\AnimalsProject\\Animals", "Animal.json");
 
         AnimalUtils au = new AnimalUtils();
 
