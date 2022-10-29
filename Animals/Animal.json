@@ -19,5 +19,12 @@
     "Size": "Small",
     "Noise": "Chirp",
     "NumberOfFeet": "2"
+  },
+  {
+    "Type": "Mammal",
+    "Name": "Zebra",
+    "Size": "Large",
+    "Noise": "Chirping bark",
+    "NumberOfFeet": "4"
   }
 ]

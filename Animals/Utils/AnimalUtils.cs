@@ -18,8 +18,6 @@ namespace Utils
         {
             Animal animal = new Animal();
             listOfAnimals = file.ReadFile(path);
-
-            if (listOfAnimals == null) return;
         }
 
         public void AddAnimalToList(Animal newAnimal, string path)
@@ -34,7 +32,14 @@ namespace Utils
             };
 
             // Add the animal to the list
-            listOfAnimals.Add(animal);
+            if (listOfAnimals == null)
+            {
+                List<Animal> a = new List<Animal>();
+                a.Add(animal);
+                listOfAnimals = a;
+            }
+            else
+                listOfAnimals.Add(animal);
 
             file.WriteFile(listOfAnimals, path);
         }
