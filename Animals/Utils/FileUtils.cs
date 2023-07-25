@@ -1,30 +1,63 @@
-﻿using Animals;
+﻿using System;
+using Animals;
 using System.IO;
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Utils
 {
-    public class FileUtils
+    class FileUtils
     {
+        //string path = Path.Combine("D:\\Goals\\AnimalsProject\\Animals", "Animal.json");
+        static string dir = Directory.GetCurrentDirectory();
+        static string bin = Directory.GetParent(dir).FullName;
+        static string pathToFile = Directory.GetParent(bin).FullName;
+        string path = Path.Combine(pathToFile, "Animal.json");
+
+
         //Save to disk
         //handle writing to file
-        public void WriteFile(List<Animal> animalList, string path)
+        public void WriteFile(Animal newAnimal)
         {
-            if (animalList == null)
-                return;
+            List<Animal> animalList = new List<Animal>();
 
-            string json = JsonConvert.SerializeObject(animalList, Formatting.Indented);
+            Animal animal = new Animal
+            {
+                Type = newAnimal.Type,
+                Name = newAnimal.Name,
+                Size = newAnimal.Size,
+                Noise = newAnimal.Noise,
+                NumberOfFeet = newAnimal.NumberOfFeet
+            };
 
-            //write the list to the file.
+            // Add the animal to the list
+            animalList.Add(animal);
+
+            string json = JsonConvert.SerializeObject(animal, Formatting.Indented);
+
+            // write the list to the file.
             File.WriteAllText(path, json);
         }
 
-        public List<Animal> ReadFile(string path)
+        public List<string> ReadFile()
         {
-            if (File.Exists(path) == false) return null;
+            Animal animal = new Animal();
+            List<string> aList = new List<string>();
 
-            return JsonConvert.DeserializeObject<List<Animal>>(File.ReadAllText(path));
+            Animal json = JsonConvert.DeserializeObject<Animal>(File.ReadAllText(path));
+
+            //loop through the file and assign to a list
+
+            Console.WriteLine(json.Type);
+            Console.WriteLine(json.Name);
+            Console.WriteLine(json.Size);
+            Console.WriteLine(json.Noise);
+            Console.WriteLine(json.NumberOfFeet);
+            Console.WriteLine("");
+            Console.ReadLine();
+
+            return aList;            
         }
     }
 }
