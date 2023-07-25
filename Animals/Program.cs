@@ -26,7 +26,7 @@ namespace Animals
                     //handle reading from file
                     //App should load animals file - “animals.json”
                     // call function to read a file and display animals
-                    Console.WriteLine("Nothing here yet - anything will get you out of here.");
+                    //Console.WriteLine("Nothing here yet - anything will get you out of here.");
                     FileUtils f = new FileUtils();
                     f.ReadFile();
                 }

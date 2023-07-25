@@ -9,7 +9,12 @@ namespace Utils
 {
     class FileUtils
     {
-        string path = Path.Combine("D:\\Kimberly\\Documents\\Goals\\Animals", "Animal.json");
+        //string path = Path.Combine("D:\\Goals\\AnimalsProject\\Animals", "Animal.json");
+        static string dir = Directory.GetCurrentDirectory();
+        static string bin = Directory.GetParent(dir).FullName;
+        static string pathToFile = Directory.GetParent(bin).FullName;
+        string path = Path.Combine(pathToFile, "Animal.json");
+
 
         //Save to disk
         //handle writing to file
@@ -42,7 +47,15 @@ namespace Utils
 
             Animal json = JsonConvert.DeserializeObject<Animal>(File.ReadAllText(path));
 
+            //loop through the file and assign to a list
+
             Console.WriteLine(json.Type);
+            Console.WriteLine(json.Name);
+            Console.WriteLine(json.Size);
+            Console.WriteLine(json.Noise);
+            Console.WriteLine(json.NumberOfFeet);
+            Console.WriteLine("");
+            Console.ReadLine();
 
             return aList;            
         }
